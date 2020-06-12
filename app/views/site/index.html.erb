@@ -1,0 +1,30 @@
+<section class="section mt-6">
+  <div class="container is-max-width-30rem">
+    <div class="card animate__animated animate__bounceInLeft">
+      <header class="card-header is-flex is-horizontal-center is-box-shadow-none">
+        <figure class="image is-128x128 is-pulled-up-64px has-text-centered is-border-primary-10px is-border-radius-100percent has-background-grey animate__animated animate__heartBeat">
+          <img class="is-rounded" src="<%= image_path 'photo-of-paulmwatson.jpg' %>" alt="<%= t('alts.photo_of_paulmwatson') %>">
+          <div class="is-shadow-inset is-border-radius-100percent " aria-hidden="true"></div>
+        </figure>
+      </header>
+      <div class="card-content is-size-5 is-size-6-mobile">
+        <h1 class="title has-text-centered is-size-5-mobile" title="<%= t("pages.#{controller_name}_#{action_name}.title") %>">
+          <%= t('greetings').shuffle.join(', ').humanize %>
+        </h1>
+        <%= t("pages.#{controller_name}_#{action_name}.intro", ago: Time.now.year - 1997).html_safe %>
+      </div>
+      <footer class="card-footer">
+        <%- t('contact').shuffle.each do |contact| -%>
+        <a class="card-footer-item" href="<%= contact[:url] %>" rel="noopener">
+          <span class="icon">
+            <i class="<%= contact[:icon] %>" aria-hidden="true"></i>
+            <span class="sr-only">
+              <%= contact[:title] %>
+            </span>
+          </span>
+        </a>
+        <%- end -%>
+      </footer>
+    </div>
+  </div>
+</section>

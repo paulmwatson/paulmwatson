@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/derived-variables';
+
+.is-box-shadow {
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
+    0 0px 0 1px rgba(10, 10, 10, 0.02);
+}
+
+.is-box-shadow-none {
+  box-shadow: unset;
+}
+
+.is-flex {
+  display: flex;
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.content a {
+  text-decoration: underline;
+}
+
+.content a.button {
+  text-decoration: unset;
+}
+
+.is-max-width-30rem {
+  max-width: 40rem;
+}
+
+.is-pulled-up-64px {
+  margin-top: -64px;
+}
+
+.is-border-primary-10px {
+  border-color: $primary;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.is-border-radius-100percent {
+  border-radius: 100%;
+}
+
+.is-shadow-inset {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 3px 3px 10px 0 $grey;
+  top: 0;
+  left: 0;
+}
