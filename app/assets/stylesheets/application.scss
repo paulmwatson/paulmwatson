@@ -30,9 +30,7 @@
 @import 'bulma/sass/helpers/spacing';
 @import 'bulma/addons';
 
-$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-@import '@fortawesome/fontawesome-free/scss/fontawesome';
-@import '@fortawesome/fontawesome-free/scss/solid';
-@import '@fortawesome/fontawesome-free/scss/brands';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 @import 'animate.css/animate';
