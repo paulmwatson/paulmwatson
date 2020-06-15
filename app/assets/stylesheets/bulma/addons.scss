@@ -34,6 +34,14 @@
   margin-top: -64px;
 }
 
+.is-pulled-up-128px {
+  margin-top: -256px;
+}
+
+.is-pushed-down-256px {
+  margin-top: -256px;
+}
+
 .is-border-lighter-2px {
   border-color: rgba(255, 255, 255, 0.3);
   @media (prefers-color-scheme: dark) {
@@ -137,5 +145,15 @@ a {
   &:hover {
     transform: scale(1.1);
     z-index: 1;
+  }
+}
+
+.is-vend {
+  align-items: end;
+}
+
+.is-margin-top-128px {
+  @media (min-width: 600px) {
+    margin-top: 128px;
   }
 }

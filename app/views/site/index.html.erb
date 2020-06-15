@@ -1,47 +1,49 @@
-<section class="section mt-6">
-  <div class="container is-max-width-40rem">
-    <div class="card animate__animated animate__swing is-rounded-bottom">
-      <header class="card-header is-flex is-horizontal-center is-box-shadow-none">
-        <figure class="image is-128x128 is-pulled-up-64px is-border-lighter-2px is-border-radius-100percent has-background-transparent">
-          <img class="is-rounded" src="<%= image_path 'photo-of-paulmwatson.jpg' %>" alt="<%= t('alts.photo_of_paulmwatson') %>">
-          <div class="is-shadow-inset is-border-radius-100percent " aria-hidden="true"></div>
-        </figure>
-      </header>
-      <div class="card-content is-size-5 is-size-6-mobile">
-        <h1 class="title has-text-centered is-size-5-mobile" title="<%= t("pages.#{controller_name}_#{action_name}.title") %>">
-          <%= t('greetings').shuffle.join(', ').humanize %>
-        </h1>
-        <%= t("pages.#{controller_name}_#{action_name}.intro", ago: Time.now.year - 1997).html_safe %>
-      </div>
-      <footer class="card-footer">
-        <%- t('contact').shuffle.each do |contact| -%>
-        <a class="card-footer-item fa-rotate-10-on-hover" href="<%= contact[:url] %>" rel="noopener" title="<%= contact[:title] %>">
-          <span class="icon">
-            <i class="<%= contact[:icon] %>" aria-hidden="true"></i>
-            <span class="sr-only">
-              <%= contact[:title] %>
-            </span>
-          </span>
-        </a>
-        <%- end -%>
-      </footer>
-    </div>
-  </div>
-</section>
 <section class="section">
-  <div class="columns is-multiline">
-    <%- ['fish', 'mercedes', 'plumjam', 'cx5', 'cabbage', 'pringlesky', 'echoroad', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge'].each do |image_name| -%>
-    <div class="column is-one-quarter">
-      <div class="card on-hover-expand-2x">
-        <header class="card-header">
-          <a href="/post/<%= image_name %>">
-            <figure class="image">
-              <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
+  <div class="container is-margin-top-128px">
+    <div class="columns is-multiline is-centered is-vend is-gapless is-mobile">
+      <%- ['fish', 'plumjam', 'mercedes', 'cx5', 'cabbage', 'pringlesky', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge'].shuffle.each_with_index do |image_name, i| -%>
+      <%- if i == 1 -%>
+      <div class="column is-half-tablet is-full-mobile">
+        <div class="card animate__animated animate__swing">
+          <header class="card-header is-flex is-horizontal-center is-box-shadow-none">
+            <figure class="image is-128x128 is-pulled-up-64px is-border-lighter-2px is-border-radius-100percent has-background-transparent">
+              <img class="is-rounded" src="<%= image_path 'photo-of-paulmwatson.jpg' %>" alt="<%= t('alts.photo_of_paulmwatson') %>">
+              <div class="is-shadow-inset is-border-radius-100percent " aria-hidden="true"></div>
             </figure>
-          </a>
-        </header>
+          </header>
+          <div class="card-content is-size-5 is-size-6-mobile">
+            <h1 class="title has-text-centered is-size-5-mobile" title="<%= t("pages.#{controller_name}_#{action_name}.title") %>">
+              <%= t('greetings').shuffle.join(', ').humanize %>
+            </h1>
+            <%= t("pages.#{controller_name}_#{action_name}.intro", ago: Time.now.year - 1997).html_safe %>
+          </div>
+          <footer class="card-footer">
+            <%- t('contact').shuffle.each do |contact| -%>
+            <a class="card-footer-item fa-rotate-10-on-hover" href="<%= contact[:url] %>" rel="noopener" title="<%= contact[:title] %>">
+              <span class="icon">
+                <i class="<%= contact[:icon] %>" aria-hidden="true"></i>
+                <span class="sr-only">
+                  <%= contact[:title] %>
+                </span>
+              </span>
+            </a>
+            <%- end -%>
+          </footer>
+        </div>
       </div>
+      <%- end -%>
+      <div class="column is-one-quarter-tablet <%= i == 0 ? 'is-full-mobile' : 'is-half-mobile' %>">
+        <div class="card on-hover-expand-2x">
+          <header class="card-header">
+            <a href="/post/<%= image_name %>">
+              <figure class="image">
+                <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
+              </figure>
+            </a>
+          </header>
+        </div>
+      </div>
+      <%- end -%>
     </div>
-    <%- end -%>
   </div>
 </section>
