@@ -26,6 +26,10 @@
   max-width: 40rem;
 }
 
+.is-max-width-60rem {
+  max-width: 50rem;
+}
+
 .is-pulled-up-64px {
   margin-top: -64px;
 }
@@ -125,5 +129,13 @@ a {
     .icon {
       transform: rotate(10deg);
     }
+  }
+}
+
+.on-hover-expand-2x {
+  transition: transform 0.1s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+    z-index: 1;
   }
 }

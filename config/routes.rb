@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'site/index'
+  get 'post/:id' => 'site#post'
   root 'site#index'
 end

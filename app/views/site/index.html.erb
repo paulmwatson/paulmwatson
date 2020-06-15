@@ -32,11 +32,13 @@
   <div class="columns is-multiline">
     <%- ['fish', 'mercedes', 'plumjam', 'cx5', 'cabbage', 'pringlesky', 'echoroad', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge'].each do |image_name| -%>
     <div class="column is-one-quarter">
-      <div class="card">
+      <div class="card on-hover-expand-2x">
         <header class="card-header">
-          <figure class="image">
-            <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
-          </figure>
+          <a href="/post/<%= image_name %>">
+            <figure class="image">
+              <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
+            </figure>
+          </a>
         </header>
       </div>
     </div>
