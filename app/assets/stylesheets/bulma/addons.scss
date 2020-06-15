@@ -2,11 +2,6 @@
 @import 'bulma/sass/utilities/initial-variables';
 @import 'bulma/sass/utilities/derived-variables';
 
-.is-box-shadow {
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1),
-    0 0px 0 1px rgba(10, 10, 10, 0.02);
-}
-
 .is-box-shadow-none {
   box-shadow: unset;
 }
@@ -27,7 +22,7 @@
   text-decoration: unset;
 }
 
-.is-max-width-30rem {
+.is-max-width-40rem {
   max-width: 40rem;
 }
 
@@ -35,10 +30,13 @@
   margin-top: -64px;
 }
 
-.is-border-primary-10px {
-  border-color: $primary;
+.is-border-lighter-2px {
+  border-color: rgba(255, 255, 255, 0.3);
+  @media (prefers-color-scheme: dark) {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
   border-style: solid;
-  border-width: 10px;
+  border-width: 2px;
 }
 
 .is-border-radius-100percent {
@@ -54,20 +52,24 @@
   left: 0;
 }
 
-html,
-body {
-  background-color: $primary;
+html {
+  height: 100%;
+  background-color: rgb(248, 250, 215);
+  @media (prefers-color-scheme: dark) {
+    background-color: rgb(13, 8, 50);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  html,
-  body {
-    background-color: $dark;
-  }
+.card {
+  background-color: rgba(248, 250, 215, 0.75);
+  box-shadow: 0 0.5em 1em -0.125em rgba(255, 255, 255, 0.1),
+    0 0px 0 1px rgba(255, 255, 255, 0.02);
 
-  .card {
+  @media (prefers-color-scheme: dark) {
     color: $white-ter;
-    background-color: $grey-dark;
+    background-color: rgba(13, 8, 50, 0.75);
+    box-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 0.1),
+      0 0px 0 1px rgba(0, 0, 0, 0.02);
 
     .card-footer {
       border-top-color: $dark;
@@ -77,20 +79,51 @@ body {
       }
     }
   }
+}
 
-  .title {
+.title {
+  @media (prefers-color-scheme: dark) {
     color: $white;
   }
+}
 
-  a {
+a {
+  @media (prefers-color-scheme: dark) {
     color: #00ccff;
 
     &:hover {
       color: #00ffff;
     }
   }
+}
 
-  .is-border-primary-10px {
-    border-color: $dark;
+.has-main-background {
+  background-image: url(main_background.png);
+  @media (prefers-color-scheme: dark) {
+    background-image: url(main_background_dark.png);
+  }
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.has-background-transparent {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.is-rounded-bottom {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.fa-rotate-10-on-hover {
+  .icon {
+    transition: transform 0.1s ease-in-out;
+  }
+  &:hover {
+    .icon {
+      transform: rotate(10deg);
+    }
   }
 }

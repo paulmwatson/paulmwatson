@@ -1,8 +1,8 @@
 <section class="section mt-6">
-  <div class="container is-max-width-30rem">
-    <div class="card animate__animated animate__bounceInLeft">
+  <div class="container is-max-width-40rem">
+    <div class="card animate__animated animate__swing is-rounded-bottom">
       <header class="card-header is-flex is-horizontal-center is-box-shadow-none">
-        <figure class="image is-128x128 is-pulled-up-64px has-text-centered is-border-primary-10px is-border-radius-100percent has-background-grey animate__animated animate__heartBeat">
+        <figure class="image is-128x128 is-pulled-up-64px is-border-lighter-2px is-border-radius-100percent has-background-transparent">
           <img class="is-rounded" src="<%= image_path 'photo-of-paulmwatson.jpg' %>" alt="<%= t('alts.photo_of_paulmwatson') %>">
           <div class="is-shadow-inset is-border-radius-100percent " aria-hidden="true"></div>
         </figure>
@@ -15,7 +15,7 @@
       </div>
       <footer class="card-footer">
         <%- t('contact').shuffle.each do |contact| -%>
-        <a class="card-footer-item" href="<%= contact[:url] %>" rel="noopener" title="<%= contact[:title] %>">
+        <a class="card-footer-item fa-rotate-10-on-hover" href="<%= contact[:url] %>" rel="noopener" title="<%= contact[:title] %>">
           <span class="icon">
             <i class="<%= contact[:icon] %>" aria-hidden="true"></i>
             <span class="sr-only">
@@ -26,5 +26,20 @@
         <%- end -%>
       </footer>
     </div>
+  </div>
+</section>
+<section class="section">
+  <div class="columns is-multiline">
+    <%- ['fish', 'mercedes', 'plumjam', 'cx5', 'cabbage', 'pringlesky', 'echoroad', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge'].each do |image_name| -%>
+    <div class="column is-one-quarter">
+      <div class="card">
+        <header class="card-header">
+          <figure class="image">
+            <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
+          </figure>
+        </header>
+      </div>
+    </div>
+    <%- end -%>
   </div>
 </section>

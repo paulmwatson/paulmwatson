@@ -6,6 +6,7 @@ en:
     - molo
     - dia dhuit
   alts:
+    photoshop_camera_photo: '%{image_name} run through Photoshop Camera'
     photo_of_paulmwatson: Photo of Paul M. Watson
   site:
     title: 'Paul Watson - Professional remote web-developer'
