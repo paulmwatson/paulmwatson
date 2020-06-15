@@ -1,5 +1,5 @@
-<section class="section">
-  <div class="container is-max-width-60rem">
+<section class="hero">
+  <div class="hero-body is-flex is-horizontal-center">
     <div class="card animate__animated animate__bounceInRight">
       <header class="card-header">
         <a href="/post/<%= @image_name %>">
@@ -12,9 +12,9 @@
   </div>
 </section>
 <section class="section">
-  <div class="columns is-multiline">
+  <div class="columns is-multiline is-mobile">
     <%- ['fish', 'mercedes', 'plumjam', 'cx5', 'cabbage', 'pringlesky', 'echoroad', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge'].each do |image_name| -%>
-    <div class="column is-one-quarter">
+    <div class="column is-1-tablet is-3-mobile">
       <div class="card on-hover-expand-2x">
         <header class="card-header">
           <a href="/post/<%= image_name %>">
@@ -27,4 +27,14 @@
     </div>
     <%- end -%>
   </div>
+</section>
+<section class="section">
+  <nav class="is-flex is-horizontal-center">
+    <%= link_to :root do %>
+    <figure class="image is-64x64 is-border-lighter-2px is-border-radius-100percent has-background-transparent">
+      <img class="is-rounded" src="<%= image_path 'photo-of-paulmwatson.jpg' %>" alt="<%= t('alts.photo_of_paulmwatson') %>">
+      <div class="is-shadow-inset is-border-radius-100percent " aria-hidden="true"></div>
+    </figure>
+    <%- end -%>
+  </nav>
 </section>
