@@ -15,7 +15,7 @@
       </div>
       <footer class="card-footer">
         <%- t('contact').shuffle.each do |contact| -%>
-        <a class="card-footer-item" href="<%= contact[:url] %>" rel="noopener">
+        <a class="card-footer-item" href="<%= contact[:url] %>" rel="noopener" title="<%= contact[:title] %>">
           <span class="icon">
             <i class="<%= contact[:icon] %>" aria-hidden="true"></i>
             <span class="sr-only">

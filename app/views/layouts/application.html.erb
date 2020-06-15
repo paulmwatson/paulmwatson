@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- <%= t('source_code_welcome')%> -->
 <html lang="<%= I18n.locale %>" class="has-background-primary">
 
 <head>
@@ -8,13 +9,10 @@
   <title><%= t('site.title') %></title>
   <meta name="description" content="<%= t('site.description') %>">
 
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 
-<body class="turbolinks-animate">
+<body>
   <%= yield %>
 </body>
 
