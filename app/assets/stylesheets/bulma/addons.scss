@@ -93,7 +93,8 @@ html {
   }
 }
 
-.title {
+.title,
+.subtitle {
   @media (prefers-color-scheme: dark) {
     color: $white;
   }
@@ -148,12 +149,16 @@ a {
   }
 }
 
-.is-vend {
-  align-items: end;
+.is-align-items-flex-end {
+  align-items: flex-end;
 }
 
 .is-margin-top-128px {
   @media (min-width: 600px) {
     margin-top: 128px;
   }
+}
+
+.is-height-100percent {
+  height: 100%;
 }

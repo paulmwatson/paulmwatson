@@ -1,6 +1,6 @@
 <section class="sectiona">
   <div class="container is-margin-top-128px">
-    <div class="columns is-multiline is-centered is-vend is-gapless is-mobile">
+    <div class="columns is-multiline is-centered is-align-items-flex-end is-gapless is-mobile">
       <%- ['fish', 'plumjam', 'mercedes', 'cx5', 'cabbage', 'pringlesky', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge'].shuffle.each_with_index do |image_name, i| -%>
       <%- if i == 1 -%>
       <div class="column is-half-tablet is-full-mobile">
@@ -33,7 +33,7 @@
       </div>
       <%- end -%>
       <div class="column is-one-quarter-tablet <%= i == 0 ? 'is-full-mobile' : 'is-half-mobile' %>">
-        <div class="card on-hover-expand-2x">
+        <div class="card">
           <header class="card-header">
             <a href="/post/<%= image_name %>">
               <figure class="image">
