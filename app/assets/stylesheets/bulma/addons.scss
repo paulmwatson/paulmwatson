@@ -53,3 +53,44 @@
   top: 0;
   left: 0;
 }
+
+html,
+body {
+  background-color: $primary;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: $dark;
+  }
+
+  .card {
+    color: $white-ter;
+    background-color: $grey-dark;
+
+    .card-footer {
+      border-top-color: $dark;
+
+      .card-footer-item:not(:last-child) {
+        border-right-color: $dark;
+      }
+    }
+  }
+
+  .title {
+    color: $white;
+  }
+
+  a {
+    color: #00ccff;
+
+    &:hover {
+      color: #00ffff;
+    }
+  }
+
+  .is-border-primary-10px {
+    border-color: $dark;
+  }
+}
