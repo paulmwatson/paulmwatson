@@ -98,9 +98,9 @@ a {
 }
 
 .has-main-background {
-  background-image: url(main_background.png);
+  background-image: image-url('main_background.png');
   @media (prefers-color-scheme: dark) {
-    background-image: url(main_background_dark.png);
+    background-image: image-url('main_background_dark.png');
   }
   background-size: cover;
   background-position: bottom center;
