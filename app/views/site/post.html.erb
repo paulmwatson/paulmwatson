@@ -14,16 +14,12 @@
 <section class="section is-pulled-up-140px">
   <div class="columns is-multiline is-mobile is-gapless">
     <%- ['fish', 'mercedes', 'plumjam', 'cx5', 'cabbage', 'pringlesky', 'echoroad', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge', ].each do |image_name| -%>
-    <div class="column is-1-tablet is-3-mobile">
-      <div class="card on-hover-expand-2x">
-        <header class="card-header">
-          <a href="/post/<%= image_name %>">
-            <figure class="image">
-              <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
-            </figure>
-          </a>
-        </header>
-      </div>
+    <div class="column is-1-tablet is-3-mobile on-hover-expand-2x">
+      <a href="/post/<%= image_name %>">
+        <figure class="image">
+          <img src="<%= image_path "photos/#{image_name}_thumb.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
+        </figure>
+      </a>
     </div>
     <%- end -%>
   </div>

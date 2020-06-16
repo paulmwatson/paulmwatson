@@ -32,16 +32,12 @@
         </div>
       </div>
       <%- end -%>
-      <div class="column is-one-quarter-tablet <%= i == 0 ? 'is-full-mobile' : 'is-half-mobile' %>">
-        <div class="card">
-          <header class="card-header">
-            <a href="/post/<%= image_name %>">
-              <figure class="image">
-                <img src="<%= image_path "photos/#{image_name}.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
-              </figure>
-            </a>
-          </header>
-        </div>
+      <div class="column is-one-quarter-tablet on-hover-expand-2x <%= i == 0 ? 'is-full-mobile' : 'is-half-mobile' %>">
+        <a href="/post/<%= image_name %>">
+          <figure class="image">
+            <img src="<%= image_path "photos/#{image_name}_thumb.png" %>" alt="<%= t('alts.photoshop_camera_photo', image_name: image_name) %>">
+          </figure>
+        </a>
       </div>
       <%- end -%>
     </div>
