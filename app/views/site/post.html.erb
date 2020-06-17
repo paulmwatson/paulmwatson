@@ -12,8 +12,8 @@
   </div>
 </section>
 <section class="section is-pulled-up-140px">
-  <div class="columns is-multiline is-mobile is-gapless">
-    <%- ['fish', 'mercedes', 'plumjam', 'cx5', 'cabbage', 'pringlesky', 'echoroad', 'houses', 'firebridge', 'artbridge', 'echobridge', 'glitchbridge', ].each do |image_name| -%>
+  <div class="columns is-multiline is-mobile is-gapless is-centered">
+    <%- posts.each do |image_name| -%>
     <div class="column is-1-tablet is-3-mobile on-hover-expand-2x">
       <a href="/post/<%= image_name %>">
         <figure class="image">
