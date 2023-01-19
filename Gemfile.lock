@@ -83,7 +83,7 @@ GEM
     ffi (1.15.5)
     font-awesome-sass (5.13.1)
       sassc (>= 1.11)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     httplog (1.6.0)
       rack (>= 2.0)
@@ -108,7 +108,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.16.3)
+    minitest (5.17.0)
     msgpack (1.6.0)
     nio4r (2.5.8)
     nokogiri (1.13.9-arm64-darwin)
@@ -236,7 +236,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.3)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   arm64-darwin-21
